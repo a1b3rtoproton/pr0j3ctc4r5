@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 # Keys
-
 data/keys.json
+keys.json
