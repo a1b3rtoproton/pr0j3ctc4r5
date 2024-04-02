@@ -1,6 +1,6 @@
 import streamlit as st
 
-def payment_form(col):
+def payment_form(col) -> tuple[str]:
     card_number = col.text_input("Card Number")
     exp_month = col.text_input("Exp Month")
     exp_year = col.text_input("Exp Year")

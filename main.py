@@ -7,12 +7,16 @@ import payments
 import costumers
 import cards
 import json
+import config
 
 st.sidebar.title('Menu')
 selectbox_sidebar_mode = st.sidebar.selectbox(label="Modes", options=['SANDBOX', 'LIVE'])
 with open('data/mode.json', 'w') as file:
     json.dump({'mode': selectbox_sidebar_mode}, file)
-selectbox_sidebar = st.sidebar.selectbox(label="Options", options=['Payments', 'Costumers', 'Cards'])
+selectbox_sidebar = st.sidebar.selectbox(label="Options", options=['Config', 'Payments', 'Costumers', 'Cards'])
+
+if selectbox_sidebar == 'Config':
+    config.config()
 
 if selectbox_sidebar == 'Payments':
     payments.payments(mode=selectbox_sidebar_mode)

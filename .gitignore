@@ -162,3 +162,7 @@ cython_debug/
 # Keys
 data/keys.json
 keys.json
+
+# database
+data/database.db
+database.db
